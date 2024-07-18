@@ -1,5 +1,3 @@
-#![feature(proc_macro_hygiene)]
-
 use bitcoin_script::bitcoin_script;
 
 #[test]

@@ -15,7 +15,6 @@ This crate exports a `bitcoin_script!` macro which can be used to build Bitcoin 
 **Example:**
 
 ```rust
-#![feature(proc_macro_hygiene)]
 
 use bitcoin_script::bitcoin_script;
 
@@ -51,6 +50,7 @@ let script = bitcoin_script!(OP_CHECKSIG OP_VERIFY);
 Positive and negative 64-bit integer literals can be used, and will resolve to their most efficient encoding.
 
 For example:
+
 - `2` will resolve to `OP_PUSHNUM_2` (`0x52`)
 - `255` will resolve to a length-delimited varint: `0x02ff00` (note the extra zero byte, due to the way Bitcoin scripts use the most-significant bit to represent the sign)`
 

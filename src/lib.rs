@@ -17,7 +17,6 @@
 //! **Example:**
 //!
 //! ```rust
-//! #![feature(proc_macro_hygiene)]
 //!
 //! use bitcoin_script::bitcoin_script;
 //!
@@ -57,7 +56,6 @@
 //! All normal opcodes are available, in the form `OP_X`.
 //!
 //! ```rust
-//! # #![feature(proc_macro_hygiene)]
 //! # use bitcoin_script::bitcoin_script;
 //! let script = bitcoin_script!(OP_CHECKSIG OP_VERIFY);
 //! ```
@@ -71,7 +69,6 @@
 //! -`255` will resolve to a length-delimited varint: `0x02ff00` (note the extra zero byte, due to the way Bitcoin scripts use the most-significant bit to represent the sign)`
 //!
 //! ```rust
-//! # #![feature(proc_macro_hygiene)]
 //! # use bitcoin_script::bitcoin_script;
 //! let script = bitcoin_script!(123 -456 999999);
 //! ```
@@ -81,7 +78,6 @@
 //! Hex strings can be specified, prefixed with `0x`.
 //!
 //! ```rust
-//! # #![feature(proc_macro_hygiene)]
 //! # use bitcoin_script::bitcoin_script;
 //! let script = bitcoin_script!(
 //!     0x0102030405060708090a0b0c0d0e0f OP_HASH160
@@ -99,7 +95,6 @@
 //! - [`bitcoin::PublicKey`](https://docs.rs/bitcoin/0.23.0/bitcoin/util/key/struct.PublicKey.html)
 //!
 //! ```rust
-//! # #![feature(proc_macro_hygiene)]
 //! # use bitcoin_script::bitcoin_script;
 //! let bytes = vec![1, 2, 3];
 //!
@@ -109,8 +104,6 @@
 //!     <2016 * 5> OP_CSV
 //! };
 //! ```
-
-#![feature(proc_macro_hygiene)]
 
 mod generate;
 mod parse;
