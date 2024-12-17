@@ -14,7 +14,7 @@ proc-macro = true
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-bitcoin = {git = "https://github.com/boolnetwork/rust-dogecoin", rev = "c976a25"}
+bitcoin = {git = "https://github.com/oraichain/rust-dogecoin", rev = "ce0554a"}
 hex = "0.4.3"
 lazy_static = "1.4.0"
 proc-macro-error = "1.0.4"
